@@ -1,4 +1,4 @@
-Haneke-AFNetworking
+Haneke+AFNetworking
 ===================
 
 > Haneke and AFNetworking,<br>
