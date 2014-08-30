@@ -11,8 +11,4 @@
 
 @interface HNKNetworkEntity(AFNetworking)
 
-- (void)fetchImageWithSuccess:(void (^)(UIImage *image))successBlock failure:(void (^)(NSError *error))failureBlock;
-
-- (void)cancelFetch;
-
 @end

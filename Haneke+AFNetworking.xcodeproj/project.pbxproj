@@ -16,7 +16,9 @@
 		A0045DEA19B2448300B12CE4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0045DE919B2448300B12CE4 /* UIKit.framework */; };
 		A0045DED19B2448300B12CE4 /* libHaneke+AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0045DD519B2448300B12CE4 /* libHaneke+AFNetworking.a */; };
 		A0045DF319B2448300B12CE4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A0045DF119B2448300B12CE4 /* InfoPlist.strings */; };
-		A0045DF519B2448300B12CE4 /* Haneke_AFNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0045DF419B2448300B12CE4 /* Haneke_AFNetworkingTests.m */; };
+		A0045DF519B2448300B12CE4 /* HNKNetworkEntity+AFNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0045DF419B2448300B12CE4 /* HNKNetworkEntity+AFNetworkingTests.m */; };
+		A0833C1419B24DE200C0BE41 /* UIImage+HanekeTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A0833C1119B24DE200C0BE41 /* UIImage+HanekeTestUtils.m */; };
+		A0833C1519B24DE200C0BE41 /* XCTestCase+HanekeTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A0833C1319B24DE200C0BE41 /* XCTestCase+HanekeTestUtils.m */; };
 		B5DC2F8258C749D29172B3D0 /* libPods-Haneke+AFNetworkingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C1C82C490E44D3A4CEEB35 /* libPods-Haneke+AFNetworkingTests.a */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +58,11 @@
 		A0045DE919B2448300B12CE4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		A0045DF019B2448300B12CE4 /* Haneke+AFNetworkingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Haneke+AFNetworkingTests-Info.plist"; sourceTree = "<group>"; };
 		A0045DF219B2448300B12CE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A0045DF419B2448300B12CE4 /* Haneke_AFNetworkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Haneke_AFNetworkingTests.m; sourceTree = "<group>"; };
+		A0045DF419B2448300B12CE4 /* HNKNetworkEntity+AFNetworkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HNKNetworkEntity+AFNetworkingTests.m"; sourceTree = "<group>"; };
+		A0833C1019B24DE200C0BE41 /* UIImage+HanekeTestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HanekeTestUtils.h"; sourceTree = "<group>"; };
+		A0833C1119B24DE200C0BE41 /* UIImage+HanekeTestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HanekeTestUtils.m"; sourceTree = "<group>"; };
+		A0833C1219B24DE200C0BE41 /* XCTestCase+HanekeTestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+HanekeTestUtils.h"; sourceTree = "<group>"; };
+		A0833C1319B24DE200C0BE41 /* XCTestCase+HanekeTestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+HanekeTestUtils.m"; sourceTree = "<group>"; };
 		A5E4CFD8DBDC403B8E13C921 /* Pods-Haneke+AFNetworkingTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Haneke+AFNetworkingTests.xcconfig"; path = "Pods/Pods-Haneke+AFNetworkingTests.xcconfig"; sourceTree = "<group>"; };
 		C0C1C82C490E44D3A4CEEB35 /* libPods-Haneke+AFNetworkingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Haneke+AFNetworkingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -140,8 +146,9 @@
 		A0045DEE19B2448300B12CE4 /* Haneke+AFNetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				A0045DF419B2448300B12CE4 /* Haneke_AFNetworkingTests.m */,
+				A0045DF419B2448300B12CE4 /* HNKNetworkEntity+AFNetworkingTests.m */,
 				A0045DEF19B2448300B12CE4 /* Supporting Files */,
+				A0833C1619B24DE600C0BE41 /* Test Utils */,
 			);
 			path = "Haneke+AFNetworkingTests";
 			sourceTree = "<group>";
@@ -153,6 +160,17 @@
 				A0045DF119B2448300B12CE4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0833C1619B24DE600C0BE41 /* Test Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A0833C1019B24DE200C0BE41 /* UIImage+HanekeTestUtils.h */,
+				A0833C1119B24DE200C0BE41 /* UIImage+HanekeTestUtils.m */,
+				A0833C1219B24DE200C0BE41 /* XCTestCase+HanekeTestUtils.h */,
+				A0833C1319B24DE200C0BE41 /* XCTestCase+HanekeTestUtils.m */,
+			);
+			name = "Test Utils";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,7 +329,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0045DF519B2448300B12CE4 /* Haneke_AFNetworkingTests.m in Sources */,
+				A0833C1519B24DE200C0BE41 /* XCTestCase+HanekeTestUtils.m in Sources */,
+				A0045DF519B2448300B12CE4 /* HNKNetworkEntity+AFNetworkingTests.m in Sources */,
+				A0833C1419B24DE200C0BE41 /* UIImage+HanekeTestUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
