@@ -22,7 +22,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import <objc/runtime.h>
 
-@interface HNKNetworkEntity (_AFNetworking)
+@interface HNKNetworkFetcher (_AFNetworking)
 
 @property (readwrite, nonatomic, strong, setter = af_setImageRequestOperation:) AFHTTPRequestOperation *af_imageRequestOperation;
 
@@ -30,7 +30,7 @@
 
 @end
 
-@implementation HNKNetworkEntity (_AFNetworking)
+@implementation HNKNetworkFetcher (_AFNetworking)
 
 + (NSOperationQueue *)af_sharedImageRequestOperationQueue
 {
@@ -64,7 +64,7 @@
 
 @end
 
-@implementation HNKNetworkEntity(AFNetworking)
+@implementation HNKNetworkFetcher(AFNetworking)
 
 + (void)load {
     static dispatch_once_t onceToken;
@@ -105,16 +105,16 @@
         {
             NSString *localizedDescription = [NSString stringWithFormat:NSLocalizedString(@"Failed to load image from data at URL %@", @""), URL];
             NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : localizedDescription , NSURLErrorKey : URL};
-            NSError *error = [NSError errorWithDomain:HNKErrorDomain code:HNKErrorNetworkEntityInvalidData userInfo:userInfo];
+            NSError *error = [NSError errorWithDomain:HNKErrorDomain code:HNKErrorNetworkFetcherInvalidData userInfo:userInfo];
             
-            [HNKNetworkEntity af_failWithError:error block:failureBlock];
+            [HNKNetworkFetcher af_failWithError:error block:failureBlock];
             return;
         }
         
         successBlock(image);
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        [HNKNetworkEntity af_failWithError:error block:failureBlock];
+        [HNKNetworkFetcher af_failWithError:error block:failureBlock];
     }];
     
     [[self.class af_sharedImageRequestOperationQueue] addOperation:self.af_imageRequestOperation];

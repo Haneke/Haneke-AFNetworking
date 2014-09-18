@@ -21,6 +21,6 @@
 #import <Foundation/Foundation.h>
 #import <Haneke/Haneke.h>
 
-@interface HNKNetworkEntity(AFNetworking)
+@interface HNKNetworkFetcher(AFNetworking)
 
 @end
