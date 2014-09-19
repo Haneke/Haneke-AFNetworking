@@ -20,7 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Haneke (0.1.2)
+  - Haneke (1.0.0)
   - OCMock (3.1.1)
   - OHHTTPStubs (3.1.5):
     - OHHTTPStubs/Core
@@ -28,18 +28,13 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.3.1)
-  - Haneke (from `https://github.com/hpique/Haneke.git`, branch `v1.0`)
+  - Haneke (~> 1.0)
   - OCMock (~> 3.1.1)
   - OHHTTPStubs (~> 3.1.1)
 
-EXTERNAL SOURCES:
-  Haneke:
-    :branch: v1.0
-    :git: https://github.com/hpique/Haneke.git
-
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
-  Haneke: cea661190bf9b32747a6145362a8e07e9f9e6497
+  Haneke: be4a384cc205809d181f86d50ace2580ee58d94d
   OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
   OHHTTPStubs: c1e362552b71b81e1deb7a80f44c51585b946c43
 
