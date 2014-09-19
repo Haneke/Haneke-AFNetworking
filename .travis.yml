@@ -1,0 +1,12 @@
+language: objective-c
+before_install:
+  - gem install cocoapods
+before_script:
+  - brew update
+  - brew upgrade xctool || true
+  - pod install
+script: 
+  - xctool -workspace Haneke+AFNetworking.xcworkspace -scheme 'Haneke+AFNetworking' -configuration Release -sdk iphonesimulator test
+branches:
+  only:
+    - master
