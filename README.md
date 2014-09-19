@@ -18,7 +18,7 @@ Alternatively, you can simply add the files from the [Haneke+AFNetworking](https
 
 ## Usage
 
-Like [Haneke](https://github.com/Haneke/Haneke) itself, using this extension requires no configuration. Simply import `Haneke+AFNetworking.h` instead of `Haneke.h`.
+Like [Haneke](https://github.com/Haneke/Haneke), using this extension requires no configuration. Simply import `Haneke+AFNetworking.h` instead of `Haneke.h`.
 
 ##License
 
